@@ -20,7 +20,9 @@
         "noUnusedParameters": true,
         "erasableSyntaxOnly": true,
         "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true
+        "noUncheckedSideEffectImports": true,
+
+        "allowJs": true //tsconfig only looks inside /src folder
     },
-    "include": ["vite.config.ts"]
+    "include": ["vite.config.ts", "eslint.config.js"]
 }
