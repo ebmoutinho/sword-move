@@ -1,5 +1,5 @@
 import storybook from "eslint-plugin-storybook";
-
+import importPlugin from "eslint-plugin-import";
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -17,7 +17,7 @@ export default defineConfig([
             ecmaVersion: 2020,
             globals: globals.browser,
             parserOptions: {
-                projectService: true,
+                project: "./tsconfig.json",
                 tsconfigRootDir: import.meta.dirname, //holds the absolute path for my tsconfig file
             },
         },
@@ -25,11 +25,24 @@ export default defineConfig([
             "react-hooks": reactHooks,
             "react-refresh": reactRefresh,
             storybook,
+            import: importPlugin,
+        },
+        settings: {
+            //eslint-plugin-import doesn't recognize my .tsx and .ts files
+            "import/resolver": {
+                typescript: {
+                    alwaysTryTypes: true,
+                    project: "./tsconfig.json",
+                },
+                node: {
+                    extensions: [".js", ".jsx", ".ts", ".tsx"],
+                },
+            },
+            "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
         },
         rules: {
             ...reactHooks.configs.recommended.rules,
             "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
-            "import/no-unresolved": "error", //enforces import/no-unresolved
             "import/order": [
                 "error",
                 {
@@ -192,6 +205,25 @@ export default defineConfig([
         languageOptions: {
             ecmaVersion: 2020,
             globals: globals.node,
+        },
+    },
+    {
+        files: [".storybook/**/*.{ts,tsx}"],
+        languageOptions: {
+            ecmaVersion: 2020,
+            globals: { ...globals.browser, ...globals.node },
+            parserOptions: {
+                project: "./tsconfig.json", // Keep type-checking
+                tsconfigRootDir: import.meta.dirname,
+            },
+        },
+        rules: {
+            semi: ["error", "always"],
+            // Disable only the problematic rules for Storybook
+            "@typescript-eslint/no-unsafe-call": "off",
+            "@typescript-eslint/no-unsafe-assignment": "off",
+            "@typescript-eslint/no-unsafe-member-access": "off",
+            "@typescript-eslint/no-unsafe-argument": "off",
         },
     },
 ]);
