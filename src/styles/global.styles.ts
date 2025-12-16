@@ -4,7 +4,6 @@ import colorsStyles from "./colors.styles";
 import spacingStyles from "./spacing.styles";
 
 const GlobalStyles = createGlobalStyle`
-
     :root {
         ${colorsStyles};
         ${spacingStyles};
@@ -17,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
 
     * {
         box-sizing: border-box;
+        font-family: "Outfit", sans-serif;
     }
 
     body {
@@ -25,6 +25,13 @@ const GlobalStyles = createGlobalStyle`
         background-color: white;
         margin: 0;
         overflow: auto;
+    }
+
+    *:focus-visible {
+        outline: 2px solid var(--color-blue-medium);
+        outline-offset: 2px;
+        border-radius: var(--spacing-20);
+        z-index: var(--layers-1);
     }
 
     h1,
@@ -59,9 +66,13 @@ const GlobalStyles = createGlobalStyle`
 
         /* for keyboard navigation */
         &:focus-visible {
-            outline: none;
+            /* outline: none; */
         }
+
+        font-size: 16px;
     }
+
+    
 `;
 
 export default GlobalStyles;

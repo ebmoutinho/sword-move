@@ -4,10 +4,15 @@ import GlobalStyles from "./styles/global.styles";
 
 function App() {
     return (
-        <>
+        <div
+            style={{
+                padding: "var(--spacing-24)",
+            }}
+        >
             <GlobalStyles />
-            <Button>Button text</Button>
-        </>
+            text
+            <Button onClick={() => console.log("button clicked")}>Button text</Button>
+        </div>
     );
 }
 

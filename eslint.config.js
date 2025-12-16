@@ -43,6 +43,7 @@ export default defineConfig([
         rules: {
             ...reactHooks.configs.recommended.rules,
             "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+            "import/no-unresolved": "error", //flags import/no-unresolved issues
             "import/order": [
                 "error",
                 {
@@ -66,57 +67,6 @@ export default defineConfig([
                             pattern: "*", //third-party libraries
                             group: "external",
                             position: "after",
-                        },
-                        //alias imports (@)
-                        {
-                            pattern: "@/routes/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/tests/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/pages/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/components/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/assets/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/themes/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/types/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/enums/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/utils/**",
-                            group: "parent",
-                            position: "before",
-                        },
-                        {
-                            pattern: "@/stories/**",
-                            group: "parent",
-                            position: "before",
                         },
                         //parent imports
                         {

@@ -20,6 +20,6 @@ export const Default: StoryObj<typeof Button> = {
         children: "Button text",
     },
     render: (args) => {
-        return <Button>{args.children}</Button>;
+        return <Button onClick={() => alert("Button clicked!")}>{args.children}</Button>;
     },
 };
