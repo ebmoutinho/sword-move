@@ -9,4 +9,5 @@ export const HeroSectionWrapper = styled.section``; //should this be section?
 export const ContentWrapper = styled.section`
     display: flex;
     flex-direction: column;
+    padding: var(--spacing-64);
 `;

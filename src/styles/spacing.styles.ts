@@ -1,6 +1,7 @@
 import { css } from "styled-components";
 
 export default css`
+    --spacing-4: 0.25rem; // 4px
     --spacing-6: 0.375rem; // 6px
     --spacing-8: 0.5rem; // 8px
     --spacing-12: 0.75rem; // 12px
@@ -15,4 +16,6 @@ export default css`
     --spacing-48: 3rem; // 48px
     --spacing-56: 3.5rem; // 56px
     --spacing-64: 4rem; // 64px
+    --spacing-72: 4.5rem; // 72px
+    --spacing-80: 5rem; // 80px
 `;

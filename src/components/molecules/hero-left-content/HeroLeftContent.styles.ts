@@ -20,13 +20,3 @@ export const Description = styled.p`
 export const BottomMessage = styled.p`
     font-weight: 600;
 `;
-
-interface CustomizableSpanStylingProps {
-    fontWeight?: number;
-    color?: string;
-}
-
-export const CustomizableSpan = styled.span<CustomizableSpanStylingProps>`
-    font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "inherit")};
-    color: ${({ color }) => (color ? color : "inherit")};
-`;

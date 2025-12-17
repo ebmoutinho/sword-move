@@ -1,5 +1,7 @@
-import Button from "./components/atoms/button/Button";
 import HeroSection from "./components/organisms/hero-section/HeroSection";
+import StartingSteps from "./components/organisms/starting-steps/StartingSteps";
+
+import { cardData } from "./data/card-data";
 
 import { AppWrapper, ContentWrapper, HeroSectionWrapper } from "./App.styles";
 import GlobalStyles from "./styles/global.styles";
@@ -14,7 +16,7 @@ const App: React.FC = () => {
             </HeroSectionWrapper>
 
             <ContentWrapper data-test="ContentWrapper">
-                <Button>button</Button>
+                <StartingSteps cardData={cardData} />
             </ContentWrapper>
         </AppWrapper>
     );

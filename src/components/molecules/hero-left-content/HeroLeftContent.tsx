@@ -1,11 +1,11 @@
 import React from "react";
 
 import { HeroLeftContentEnum } from "../../../enums/enums";
+import { CustomizableSpan } from "../../../styles/shared.styles";
 
 import Button from "../../atoms/button/Button";
 
 import {
-    CustomizableSpan,
     BottomMessage,
     Description,
     HeroLeftContentWrapper,
