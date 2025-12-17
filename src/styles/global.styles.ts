@@ -14,15 +14,24 @@ const GlobalStyles = createGlobalStyle`
         height: 100%;
     }
 
+    html {
+        font-size: 16px;
+    }
+
     * {
         box-sizing: border-box;
-        font-family: "Outfit", sans-serif;
     }
 
     body {
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5; //16px × 1.5 = 24px
+        color: var(--color-dark);
+
         -webkit-font-smoothing: antialiased;
-        color: black;
-        background-color: white;
+        color: var(--color-dark);
+        background-color: var(--color-white);
         margin: 0;
         overflow: auto;
     }
@@ -39,7 +48,8 @@ const GlobalStyles = createGlobalStyle`
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    p {
         margin: 0;
         color: inherit;
     }
@@ -58,21 +68,20 @@ const GlobalStyles = createGlobalStyle`
     }
 
     button {
+        font-family: inherit;
         border: none;
         appearance: none;
         padding: 0;
         cursor: pointer;
         color: initial;
 
+        font-size: 16px;
+
         /* for keyboard navigation */
         &:focus-visible {
             /* outline: none; */
         }
-
-        font-size: 16px;
     }
-
-    
 `;
 
 export default GlobalStyles;

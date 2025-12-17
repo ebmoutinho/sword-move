@@ -1,19 +1,23 @@
 import Button from "./components/atoms/button/Button";
+import HeroSection from "./components/organisms/hero-section/HeroSection";
 
+import { AppWrapper, ContentWrapper, HeroSectionWrapper } from "./App.styles";
 import GlobalStyles from "./styles/global.styles";
 
-function App() {
+const App: React.FC = () => {
     return (
-        <div
-            style={{
-                padding: "var(--spacing-24)",
-            }}
-        >
+        <AppWrapper data-test="AppWrapper">
             <GlobalStyles />
-            text
-            <Button onClick={() => console.log("button clicked")}>Button text</Button>
-        </div>
+
+            <HeroSectionWrapper data-test="HeroSectionWrapper">
+                <HeroSection />
+            </HeroSectionWrapper>
+
+            <ContentWrapper data-test="ContentWrapper">
+                <Button>button</Button>
+            </ContentWrapper>
+        </AppWrapper>
     );
-}
+};
 
 export default App;
