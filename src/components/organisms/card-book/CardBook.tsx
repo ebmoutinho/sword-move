@@ -17,6 +17,7 @@ const CardBook: React.FC<CardBookProps> = ({ cardData }) => {
                 return (
                     <Card
                         key={`${card.id}-${index}`}
+                        id={card.id}
                         image={card.imageUrl}
                         title={card.title}
                         description={card.description}
