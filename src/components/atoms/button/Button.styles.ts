@@ -6,6 +6,7 @@ export const ButtonWrapper = styled.button`
     padding: var(--spacing-16) var(--spacing-36);
     border-radius: var(--spacing-16);
     width: fit-content;
+    cursor: pointer;
 
     &:hover {
         background-color: var(--color-blue-medium);

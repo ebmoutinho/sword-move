@@ -18,7 +18,17 @@ const StartingSteps: React.FC<StartingStepsProps> = ({ cardData }) => {
     return (
         <StartingStepsWrapper data-testid="stating-steps">
             <PillAndTitleWrapper>
-                <Pill letterSpacing="0.0625rem">{PillEnum.Text}</Pill>
+                <Pill
+                    color="var(--color-black)"
+                    backgroundColor="var(--color-grey-light)"
+                    fontSize="var(--spacing-12)"
+                    padding="var(--spacing-4) var(--spacing-20)"
+                    borderRadius="var(--spacing-16)"
+                    fontWeight="400"
+                    letterSpacing="0.0625rem"
+                >
+                    {PillEnum.Text}
+                </Pill>
 
                 <Title>
                     {StartingStepsEnum.Title01}

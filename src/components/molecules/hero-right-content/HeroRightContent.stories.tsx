@@ -1,0 +1,14 @@
+import HeroRightContent from "./HeroRightContent";
+
+import type { Meta, StoryObj } from "@storybook/react";
+
+export default {
+    title: "Molecules/HeroRightContent",
+    component: HeroRightContent,
+} as Meta<typeof HeroRightContent>;
+
+export const Default: StoryObj<typeof HeroRightContent> = {
+    render: () => {
+        return <HeroRightContent />;
+    },
+};

@@ -1,7 +1,5 @@
 import React from "react";
 
-import Pill from "../../atoms/pill/Pill";
-
 import {
     CardWrapper,
     Image,
@@ -28,16 +26,7 @@ const Card: React.FC<CardProps> = ({ id, image, title, description }) => {
             <LineSeparatorAndPillWrapper data-test="LineSeparatorAndPillWrapper">
                 <LineSeparator data-test="LineSeparator" />
 
-                <StyledPill
-                    color="var(--color-white)"
-                    backgroundColor="var(--color-blue-light)"
-                    fontSize="var(--spacing-24)"
-                    padding="var(--spacing-4) var(--spacing-16)"
-                    borderRadius="var(--spacing-12)"
-                    fontWeight="600"
-                >
-                    {id}
-                </StyledPill>
+                <StyledPill>{id}</StyledPill>
             </LineSeparatorAndPillWrapper>
 
             <TextWrapper>

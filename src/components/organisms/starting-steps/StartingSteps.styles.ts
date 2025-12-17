@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StartingStepsWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-56);
+    gap: var(--spacing-48);
 `;
 
 export const Title = styled.h2`

@@ -18,14 +18,14 @@ export const PillWrapper = styled.div.withConfig({
 })<PillWrapperStylingProps>`
     display: flex;
     justify-content: center;
-    color: ${({ color }) => (color ? color : "var(--color-black)")};
+    color: ${({ color }) => (color ? color : "var(--color-white)")};
     background-color: ${({ backgroundColor }) =>
-        backgroundColor ? backgroundColor : "var(--color-grey-light)"};
-    padding: ${({ padding }) => (padding ? padding : "var(--spacing-4) var(--spacing-20)")};
-    border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : "var(--spacing-16)")};
+        backgroundColor ? backgroundColor : "var(--color-blue-light)"};
+    padding: ${({ padding }) => (padding ? padding : "var(--spacing-4) var(--spacing-16)")};
+    border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : "var(--spacing-12)")};
     width: fit-content;
     min-width: 3ch; //min-width based on character width
-    font-size: ${({ fontSize }) => (fontSize ? fontSize : "0.75rem")}; //12px
+    font-size: ${({ fontSize }) => (fontSize ? fontSize : "var(--spacing-24)")};
     letter-spacing: ${({ letterSpacing }) => (letterSpacing ? letterSpacing : "unset")}; //1px
-    font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "400")};
+    font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "600")};
 `;
