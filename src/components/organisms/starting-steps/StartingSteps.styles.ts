@@ -7,8 +7,8 @@ export const StartingStepsWrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-    font-size: 2.25rem; //36px
-    letter-spacing: -0.09375rem; //-1.5rem
+    font-size: 2.25rem;
+    letter-spacing: -0.09375rem;
 `;
 
 export const PillAndTitleWrapper = styled.div`

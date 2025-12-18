@@ -15,4 +15,11 @@ export const ButtonWrapper = styled.button`
     &:active {
         background-color: var(--color-blue-dark);
     }
+
+    &:focus-visible {
+        outline: var(--spacing-2) solid var(--color-blue-medium);
+        outline-offset: var(--spacing-2);
+        border-radius: var(--spacing-20);
+        z-index: var(--layers-1);
+    }
 `;

@@ -25,7 +25,7 @@ export const PillWrapper = styled.div.withConfig({
     border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : "var(--spacing-12)")};
     width: fit-content;
     min-width: 3ch; //min-width based on character width
-    font-size: ${({ fontSize }) => (fontSize ? fontSize : "var(--spacing-24)")};
-    letter-spacing: ${({ letterSpacing }) => (letterSpacing ? letterSpacing : "unset")}; //1px
+    font-size: ${({ fontSize }) => (fontSize ? fontSize : "1.5rem")};
+    letter-spacing: ${({ letterSpacing }) => (letterSpacing ? letterSpacing : "normal")};
     font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : "600")};
 `;

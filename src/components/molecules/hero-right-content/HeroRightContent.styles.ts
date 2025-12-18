@@ -5,7 +5,7 @@ export const HeroRightContentWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-    min-width: 50vw; //se não tiver o min, vai abaixo de 50vw!
+    min-width: 50vw;
     max-height: 100vh;
     object-fit: cover;
     filter: opacity(0.9);
@@ -21,7 +21,7 @@ export const WordsWrapper = styled.div`
 `;
 
 export const Word = styled.h1`
-    font-size: 4rem; //64px
+    font-size: 4rem;
     font-weight: 700;
     color: var(--color-white);
 `;

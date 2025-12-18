@@ -7,7 +7,6 @@ export interface ButtonProps {
     onClick?: () => void;
 }
 
-//aria-label
 const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
     return (
         <ButtonWrapper data-testid="button" onClick={onClick}>

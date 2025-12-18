@@ -36,13 +36,6 @@ const GlobalStyles = createGlobalStyle`
         overflow: auto;
     }
 
-    *:focus-visible {
-        outline: 2px solid var(--color-blue-medium);
-        outline-offset: 2px;
-        border-radius: var(--spacing-20);
-        z-index: var(--layers-1);
-    }
-
     h1,
     h2,
     h3,
@@ -96,6 +89,11 @@ const GlobalStyles = createGlobalStyle`
 
     //scrollbar Handle on hover
     ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-blue-medium);
+    }
+
+    ::selection {
+        color: var(--color-white);
         background: var(--color-blue-medium);
     }
 `;

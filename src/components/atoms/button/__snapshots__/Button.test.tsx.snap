@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Button calls callback function on click 1`] = `
+.c0 {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  padding: var(--spacing-16) var(--spacing-36);
+  border-radius: var(--spacing-16);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: var(--color-blue-medium);
+}
+
+.c0:active {
+  background-color: var(--color-blue-dark);
+}
+
+.c0:focus-visible {
+  outline: var(--spacing-2) solid var(--color-blue-medium);
+  outline-offset: var(--spacing-2);
+  border-radius: var(--spacing-20);
+  z-index: var(--layers-1);
+}
+
+<button
+  class="c0"
+  data-testid="button"
+>
+  Button text
+</button>
+`;
+
+exports[`Button renders correctly 1`] = `
+.c0 {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  padding: var(--spacing-16) var(--spacing-36);
+  border-radius: var(--spacing-16);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: var(--color-blue-medium);
+}
+
+.c0:active {
+  background-color: var(--color-blue-dark);
+}
+
+.c0:focus-visible {
+  outline: var(--spacing-2) solid var(--color-blue-medium);
+  outline-offset: var(--spacing-2);
+  border-radius: var(--spacing-20);
+  z-index: var(--layers-1);
+}
+
+<button
+  class="c0"
+  data-testid="button"
+>
+  Button text
+</button>
+`;
+
+exports[`Button renders with styles according to state renders active styles 1`] = `
+.c0 {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  padding: var(--spacing-16) var(--spacing-36);
+  border-radius: var(--spacing-16);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: var(--color-blue-medium);
+}
+
+.c0:active {
+  background-color: var(--color-blue-dark);
+}
+
+.c0:focus-visible {
+  outline: var(--spacing-2) solid var(--color-blue-medium);
+  outline-offset: var(--spacing-2);
+  border-radius: var(--spacing-20);
+  z-index: var(--layers-1);
+}
+
+<button
+  class="c0"
+  data-testid="button"
+>
+  Button text
+</button>
+`;
+
+exports[`Button renders with styles according to state renders focus styles 1`] = `
+.c0 {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  padding: var(--spacing-16) var(--spacing-36);
+  border-radius: var(--spacing-16);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: var(--color-blue-medium);
+}
+
+.c0:active {
+  background-color: var(--color-blue-dark);
+}
+
+.c0:focus-visible {
+  outline: var(--spacing-2) solid var(--color-blue-medium);
+  outline-offset: var(--spacing-2);
+  border-radius: var(--spacing-20);
+  z-index: var(--layers-1);
+}
+
+<button
+  class="c0"
+  data-testid="button"
+>
+  Button text
+</button>
+`;
+
+exports[`Button renders with styles according to state renders hover styles 1`] = `
+.c0 {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+  padding: var(--spacing-16) var(--spacing-36);
+  border-radius: var(--spacing-16);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: var(--color-blue-medium);
+}
+
+.c0:active {
+  background-color: var(--color-blue-dark);
+}
+
+.c0:focus-visible {
+  outline: var(--spacing-2) solid var(--color-blue-medium);
+  outline-offset: var(--spacing-2);
+  border-radius: var(--spacing-20);
+  z-index: var(--layers-1);
+}
+
+<button
+  class="c0"
+  data-testid="button"
+>
+  Button text
+</button>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Pill renders correctly 1`] = `
+<div
+  class="sc-bRKDuR cvuOzy"
+  data-testid="pill"
+>
+  Pill text
+</div>
+`;

@@ -3,7 +3,6 @@ import React from "react";
 import {
     CardWrapper,
     Image,
-    Description,
     Title,
     TextWrapper,
     LineSeparator,
@@ -32,7 +31,7 @@ const Card: React.FC<CardProps> = ({ id, imageUrl, alt, title, description }) =>
 
             <TextWrapper>
                 <Title>{title}</Title>
-                <Description>{description}</Description>
+                <p>{description}</p>
             </TextWrapper>
         </CardWrapper>
     );

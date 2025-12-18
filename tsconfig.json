@@ -7,6 +7,7 @@
         "types": ["vite/client", "jest"],
         "skipLibCheck": true,
 
+        "esModuleInterop": true,
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
         "verbatimModuleSyntax": true,
@@ -28,7 +29,8 @@
         ".storybook/**/*",
         "src/tests/setupTests.ts",
         "vite.config.ts",
-        "vite-env.d.ts"
+        "vite-env.d.ts",
+        "__mocks__/**/*"
     ],
     "exclude": ["node_modules", "dist"]
 }

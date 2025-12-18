@@ -21,7 +21,7 @@ const StartingSteps: React.FC<StartingStepsProps> = ({ cardData }) => {
                 <Pill
                     color="var(--color-black)"
                     backgroundColor="var(--color-grey-light)"
-                    fontSize="var(--spacing-12)"
+                    fontSize="0.75rem"
                     padding="var(--spacing-4) var(--spacing-20)"
                     borderRadius="var(--spacing-16)"
                     fontWeight="400"

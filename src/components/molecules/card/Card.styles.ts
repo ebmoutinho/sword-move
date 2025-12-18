@@ -39,8 +39,6 @@ export const TextWrapper = styled.div`
 `;
 
 export const Title = styled.h3`
-    font-size: 1.5rem; //24px
+    font-size: 1.5rem;
     font-weight: 500;
 `;
-
-export const Description = styled.p``; //remove and add a <p></p>

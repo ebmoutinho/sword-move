@@ -27,7 +27,7 @@ const HeroRightContent: React.FC<HeroRightContentProps> = ({ heroRightContentDat
     }, [words]);
 
     return (
-        <HeroRightContentWrapper>
+        <HeroRightContentWrapper data-testid="hero-right-content">
             <Image
                 src={momAndBabyPhoto}
                 alt="woman holding her baby in the outdoors"
