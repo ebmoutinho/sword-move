@@ -76,11 +76,27 @@ const GlobalStyles = createGlobalStyle`
         color: initial;
 
         font-size: 16px;
+    }
 
-        /* for keyboard navigation */
-        &:focus-visible {
-            /* outline: none; */
-        }
+    //scrollbar width
+    ::-webkit-scrollbar {
+        width: var(--spacing-8);
+    }
+
+    //scrollbar Track
+    ::-webkit-scrollbar-track {
+        background: var(--color-white);
+    }
+
+    //scrollbar Handle
+    ::-webkit-scrollbar-thumb {
+        background: var(--color-blue-light);
+        border-radius: var(--spacing-8);
+    }
+
+    //scrollbar Handle on hover
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-blue-medium);
     }
 `;
 
