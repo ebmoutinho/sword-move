@@ -1,8 +1,22 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Pill renders correctly 1`] = `
+.c0 {
+  display: flex;
+  justify-content: center;
+  color: var(--color-white);
+  background-color: var(--color-blue-light);
+  padding: var(--spacing-4) var(--spacing-16);
+  border-radius: var(--spacing-12);
+  width: fit-content;
+  min-width: 3ch;
+  font-size: 1.5rem;
+  letter-spacing: normal;
+  font-weight: 600;
+}
+
 <div
-  class="sc-bRKDuR cvuOzy"
+  class="c0"
   data-testid="pill"
 >
   Pill text
