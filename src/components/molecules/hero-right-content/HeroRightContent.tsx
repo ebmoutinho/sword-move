@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import momAndBabyPhoto from "../../../assets/photos/mom-and-baby.webp";
+import momAndBabyPhoto from "../../../assets/photos/hero-section/mom-and-baby.webp";
 
 import { HeroRightContentWrapper, Image, Word, WordsWrapper } from "./HeroRightContent.styles";
 
