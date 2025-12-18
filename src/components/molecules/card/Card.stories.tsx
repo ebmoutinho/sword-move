@@ -16,7 +16,12 @@ export default {
                 disable: true,
             },
         },
-        image: {
+        imageUrl: {
+            table: {
+                disable: true,
+            },
+        },
+        alt: {
             table: {
                 disable: true,
             },
@@ -46,7 +51,8 @@ export const Default: StoryObj<typeof Card> = {
             <CardWrapper>
                 <Card
                     id={card01Data.id}
-                    image={card01Data.imageUrl}
+                    imageUrl={card01Data.imageUrl}
+                    alt={card01Data.alt}
                     title={card01Data.title}
                     description={card01Data.description}
                 />

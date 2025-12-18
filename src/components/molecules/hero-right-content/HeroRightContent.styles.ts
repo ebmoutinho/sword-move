@@ -10,3 +10,18 @@ export const Image = styled.img`
     object-fit: cover;
     filter: opacity(0.9);
 `;
+
+export const WordsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: var(--spacing-12) var(--spacing-36);
+    position: absolute;
+`;
+
+export const Word = styled.h1`
+    font-size: 4rem; //64px
+    font-weight: 700;
+    color: var(--color-white);
+`;

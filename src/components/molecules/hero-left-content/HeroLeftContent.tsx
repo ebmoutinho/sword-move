@@ -17,7 +17,7 @@ const HeroLeftContent: React.FC = () => {
         <HeroLeftContentWrapper data-testid="hero-left-content">
             <Title>
                 {HeroLeftContentEnum.Title01}
-                <CustomizableSpan color="var(--color-blue-light)">
+                <CustomizableSpan animate color="var(--color-blue-light)">
                     {HeroLeftContentEnum.Title02}
                 </CustomizableSpan>
             </Title>
