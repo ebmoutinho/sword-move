@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import momAndBabyPhoto from "../../../assets/photos/mom-and-baby.jpg";
+import momAndBabyPhoto from "../../../assets/photos/mom-and-baby.webp";
 
 import { HeroRightContentWrapper, Image, Word, WordsWrapper } from "./HeroRightContent.styles";
 
@@ -28,7 +28,12 @@ const HeroRightContent: React.FC<HeroRightContentProps> = ({ heroRightContentDat
 
     return (
         <HeroRightContentWrapper>
-            <Image src={momAndBabyPhoto} alt="woman holding her baby in the outdoors" />
+            <Image
+                src={momAndBabyPhoto}
+                alt="woman holding her baby in the outdoors"
+                fetchPriority="high"
+                loading="eager" //prevents lazy load
+            />
 
             <WordsWrapper>
                 {words?.map((word: string, index: number) => {

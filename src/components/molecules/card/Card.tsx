@@ -22,10 +22,10 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ id, imageUrl, alt, title, description }) => {
     return (
         <CardWrapper data-testid="card">
-            <Image src={imageUrl} alt={alt} />
+            <Image src={imageUrl} alt={alt} loading="lazy" />
 
-            <LineSeparatorAndPillWrapper data-test="LineSeparatorAndPillWrapper">
-                <LineSeparator data-test="LineSeparator" />
+            <LineSeparatorAndPillWrapper>
+                <LineSeparator />
 
                 <StyledPill>{id}</StyledPill>
             </LineSeparatorAndPillWrapper>
