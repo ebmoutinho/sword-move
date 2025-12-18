@@ -16,7 +16,7 @@ interface StartingStepsProps {
 
 const StartingSteps: React.FC<StartingStepsProps> = ({ cardData }) => {
     return (
-        <StartingStepsWrapper data-testid="stating-steps">
+        <StartingStepsWrapper data-testid="starting-steps">
             <PillAndTitleWrapper>
                 <Pill
                     color="var(--color-black)"

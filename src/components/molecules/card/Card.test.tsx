@@ -14,7 +14,7 @@ describe("Card", () => {
             />,
         );
 
-        const card = screen.getByTestId("card");
+        const card = screen.getByTestId("card-1");
         const image = screen.getByRole("img");
         const pill = screen.getByTestId("pill");
 

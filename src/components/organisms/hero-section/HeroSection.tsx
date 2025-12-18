@@ -1,6 +1,6 @@
 import React from "react";
 
-import { heroRightContentData } from "../../../data/hero-right-content-data";
+import { words } from "../../../data/hero-right-content-data";
 
 import HeroLeftContent from "../../molecules/hero-left-content/HeroLeftContent";
 import HeroRightContent from "../../molecules/hero-right-content/HeroRightContent";
@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
             </LeftColumn>
 
             <RightColumn data-test="RightColumn">
-                <HeroRightContent heroRightContentData={heroRightContentData} />
+                <HeroRightContent heroRightContentData={words} />
             </RightColumn>
         </HeroSectionWrapper>
     );

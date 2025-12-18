@@ -20,7 +20,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ id, imageUrl, alt, title, description }) => {
     return (
-        <CardWrapper data-testid="card">
+        <CardWrapper data-testid={`card-${id}`}>
             <Image src={imageUrl} alt={alt} loading="lazy" />
 
             <LineSeparatorAndPillWrapper>

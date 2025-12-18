@@ -1,4 +1,4 @@
-import { heroRightContentData } from "../../../data/hero-right-content-data";
+import { words } from "../../../data/hero-right-content-data";
 
 import HeroRightContent from "./HeroRightContent";
 
@@ -18,6 +18,6 @@ export default {
 
 export const Default: StoryObj<typeof HeroRightContent> = {
     render: () => {
-        return <HeroRightContent heroRightContentData={heroRightContentData} />;
+        return <HeroRightContent heroRightContentData={words} />;
     },
 };

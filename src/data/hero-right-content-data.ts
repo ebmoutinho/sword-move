@@ -1,4 +1,4 @@
-export const heroRightContentData: string[] = [
+export const words: string[] = [
     "CAREER",
     "FUTURE SELF",
     "LOVED ONES",
