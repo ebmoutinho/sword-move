@@ -4,8 +4,6 @@ export const AppWrapper = styled.main`
     overflow-x: hidden;
 `;
 
-export const HeroSectionWrapper = styled.section``;
-
 export const ContentWrapper = styled.section`
     display: flex;
     flex-direction: column;

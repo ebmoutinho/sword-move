@@ -1,12 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 import colorsStyles from "./colors.styles";
+import heightsStyles from "./heights.styles";
 import spacingStyles from "./spacing.styles";
 
 const GlobalStyles = createGlobalStyle`
     :root {
         ${colorsStyles};
         ${spacingStyles};
+        ${heightsStyles}
     }
 
     #root {

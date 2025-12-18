@@ -6,7 +6,7 @@ export const HeroRightContentWrapper = styled.div`
 
 export const Image = styled.img`
     min-width: 50vw;
-    max-height: 100vh;
+    max-height: calc(100vh - var(--header-height));
     object-fit: cover;
     filter: opacity(0.9);
 `;
@@ -15,7 +15,7 @@ export const WordsWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    height: calc(100% - var(--header-height));
     padding: var(--spacing-12) var(--spacing-36);
     position: absolute;
 `;

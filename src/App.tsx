@@ -1,23 +1,35 @@
+import { Route, Routes, useLocation } from "react-router-dom";
+
+import Header from "./components/organisms/header/Header";
 import HeroSection from "./components/organisms/hero-section/HeroSection";
-import StartingSteps from "./components/organisms/starting-steps/StartingSteps";
 
-import { cardData } from "./data/card-data";
+import { RouteEnum } from "./enums/routes.enums";
+import GettingStartedPage from "./pages/getting-started/GettingStartedPage";
+import HomePage from "./pages/home/HomePage";
 
-import { AppWrapper, ContentWrapper, HeroSectionWrapper } from "./App.styles";
+import { AppWrapper, ContentWrapper } from "./App.styles";
 import GlobalStyles from "./styles/global.styles";
 
 const App: React.FC = () => {
+    const location = useLocation();
+    const isHomepage = location.pathname === "/";
+
     return (
-        <AppWrapper data-test="AppWrapper">
+        <AppWrapper>
             <GlobalStyles />
 
-            <HeroSectionWrapper data-test="HeroSectionWrapper">
-                <HeroSection />
-            </HeroSectionWrapper>
+            <Header />
 
-            <ContentWrapper data-test="ContentWrapper">
-                <StartingSteps cardData={cardData} />
-            </ContentWrapper>
+            {isHomepage && <HeroSection />}
+
+            {!isHomepage && (
+                <ContentWrapper>
+                    <Routes>
+                        <Route path={RouteEnum.Home} element={<HomePage />} />
+                        <Route path={RouteEnum.GettingStarted} element={<GettingStartedPage />} />
+                    </Routes>
+                </ContentWrapper>
+            )}
         </AppWrapper>
     );
 };
