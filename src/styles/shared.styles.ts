@@ -1,5 +1,17 @@
 import styled, { css, keyframes } from "styled-components";
 
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 interface CustomizableSpanStylingProps {
     fontWeight?: number;
     color?: string;
@@ -17,10 +29,9 @@ export const CustomizableSpan = styled.span.withConfig({
         css`
             cursor: pointer;
             display: inline-block;
-            transition: all 300ms ease-in-out;
 
             &:hover {
-                transform: scale(1.05);
+                animation: ${pulse} 1.5s infinite ease-in-out;
             }
         `}
 `;
