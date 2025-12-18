@@ -8,7 +8,7 @@ export const HeroLeftContentWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 900;
     line-height: 1.2;
 `;

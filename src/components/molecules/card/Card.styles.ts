@@ -5,7 +5,7 @@ import Pill from "../../atoms/pill/Pill";
 export const CardWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 46px;
+    gap: var(--spacing-48);
 `;
 
 export const Image = styled.img`
