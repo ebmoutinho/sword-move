@@ -1,6 +1,7 @@
 import React from "react";
 
-import { PillEnum, StartingStepsEnum } from "../../../enums/enums";
+import { PillEnum } from "../../../enums/pill.enums";
+import { StartingStepsEnum } from "../../../enums/starting-steps.enums";
 import { CustomizableSpan } from "../../../styles/shared.styles";
 import type { CardType } from "../../../types/Card.types";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import SwordIcon from "../../../assets/icons/SwordIcon";
 import { menuItems } from "../../../enums/menu-items.enums";
@@ -11,6 +11,7 @@ import MenuItem from "../../atoms/menu-item/MenuItem";
 import { HeaderWrapper, IconWrapper, MenuItemsWrapper } from "./Header.styles";
 
 const Header: React.FC = () => {
+    const location = useLocation();
     const navigate = useNavigate();
 
     const handleIconClick = () => {
@@ -25,7 +26,13 @@ const Header: React.FC = () => {
 
             <MenuItemsWrapper>
                 {menuItems.map((item: MenuItemType, index: number) => {
-                    return <MenuItem key={`${item.title}-${index}`} menuItem={item} />;
+                    return (
+                        <MenuItem
+                            key={`${item.title}-${index}`}
+                            menuItem={item}
+                            isSelected={location.pathname === (item.route as string)}
+                        />
+                    );
                 })}
             </MenuItemsWrapper>
         </HeaderWrapper>

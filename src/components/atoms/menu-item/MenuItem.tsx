@@ -6,11 +6,12 @@ import { MenuItemWrapper } from "./MenuItem.styles";
 
 interface MenuItemProps {
     menuItem: MenuItemType;
+    isSelected: boolean;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ menuItem }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ menuItem, isSelected }) => {
     return (
-        <MenuItemWrapper data-testid="menu-item" to={menuItem.route}>
+        <MenuItemWrapper data-testid="menu-item" to={menuItem.route} isSelected={isSelected}>
             {menuItem.title}
         </MenuItemWrapper>
     );

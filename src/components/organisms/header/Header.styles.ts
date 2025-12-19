@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
+    height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,7 +13,7 @@ export const IconWrapper = styled.div`
     cursor: pointer;
 `;
 
-export const MenuItemsWrapper = styled.div`
+export const MenuItemsWrapper = styled.nav`
     display: flex;
     gap: var(--spacing-56);
 `;

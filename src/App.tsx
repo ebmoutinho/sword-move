@@ -1,18 +1,23 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
+import Footer from "./components/organisms/footer/Footer";
 import Header from "./components/organisms/header/Header";
 import HeroSection from "./components/organisms/hero-section/HeroSection";
 
+import { menuItems } from "./enums/menu-items.enums";
+import { PageEnum } from "./enums/pages.enums";
 import { RouteEnum } from "./enums/routes.enums";
-import GettingStartedPage from "./pages/getting-started/GettingStartedPage";
 import HomePage from "./pages/home/HomePage";
+
+import type { MenuItemType } from "./types/MenuItems.types";
 
 import { AppWrapper, ContentWrapper } from "./App.styles";
 import GlobalStyles from "./styles/global.styles";
 
 const App: React.FC = () => {
-    const location = useLocation();
-    const isHomepage = location.pathname === "/";
+    const filteredMenuItems: MenuItemType[] = menuItems.filter((item: MenuItemType) => {
+        return item.title !== (PageEnum.Home as string);
+    });
 
     return (
         <AppWrapper>
@@ -20,16 +25,29 @@ const App: React.FC = () => {
 
             <Header />
 
-            {isHomepage && <HeroSection />}
+            <Routes>
+                <Route
+                    path={RouteEnum.Home}
+                    element={
+                        <>
+                            <HeroSection />
+                            <HomePage />
+                        </>
+                    }
+                />
 
-            {!isHomepage && (
-                <ContentWrapper>
-                    <Routes>
-                        <Route path={RouteEnum.Home} element={<HomePage />} />
-                        <Route path={RouteEnum.GettingStarted} element={<GettingStartedPage />} />
-                    </Routes>
-                </ContentWrapper>
-            )}
+                {filteredMenuItems.map((item: MenuItemType) => {
+                    return (
+                        <Route
+                            key={item.route}
+                            path={item.route}
+                            element={<ContentWrapper>{item.page}</ContentWrapper>}
+                        />
+                    );
+                })}
+            </Routes>
+
+            <Footer />
         </AppWrapper>
     );
 };

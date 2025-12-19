@@ -1,4 +1,4 @@
 export enum RouteEnum {
     Home = "/",
-    GettingStarted = "getting-started",
+    GettingStarted = "/getting-started",
 }

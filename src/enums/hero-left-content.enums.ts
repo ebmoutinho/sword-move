@@ -6,12 +6,3 @@ export enum HeroLeftContentEnum {
     Button = "Get started",
     BottomMessage = "Join members moving with purpose.",
 }
-
-export enum PillEnum {
-    Text = "HOW IT WORKS",
-}
-
-export enum StartingStepsEnum {
-    Title01 = "GETTING STARTED IS ",
-    Title02 = "SIMPLE.",
-}

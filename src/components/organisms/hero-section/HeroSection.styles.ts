@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeroSectionWrapper = styled.div`
     display: flex;
     align-items: center;
-    height: calc(100% - var(--header-height));
+    height: calc(100vh - var(--header-height));
 `;
 
 export const LeftColumn = styled.div`

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { HeroLeftContentEnum } from "../../../enums/enums";
+import { HeroLeftContentEnum } from "../../../enums/hero-left-content.enums";
 import { RouteEnum } from "../../../enums/routes.enums";
 import { CustomizableSpan } from "../../../styles/shared.styles";
 
