@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
+import ScrollToTop from "./components/functional/scroll-to-top/ScrollToTop";
 import Footer from "./components/organisms/footer/Footer";
 import Header from "./components/organisms/header/Header";
 import HeroSection from "./components/organisms/hero-section/HeroSection";
@@ -22,6 +23,7 @@ const App: React.FC = () => {
     return (
         <AppWrapper>
             <GlobalStyles />
+            <ScrollToTop />
 
             <Header />
 
