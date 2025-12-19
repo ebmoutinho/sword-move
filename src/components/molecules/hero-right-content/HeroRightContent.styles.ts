@@ -4,7 +4,14 @@ export const HeroRightContentWrapper = styled.div`
     display: flex;
 `;
 
-export const Image = styled.img`
+export const Image = styled.img
+    .withConfig({
+        shouldForwardProp: (prop) => !["fetchPriority", "loading"].includes(prop),
+    })
+    .attrs({
+        fetchPriority: "high",
+        loading: "eager", //prevents lazy load
+    })`
     min-width: 50vw;
     max-height: calc(100vh - var(--header-height));
     object-fit: cover;

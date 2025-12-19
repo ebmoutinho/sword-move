@@ -28,12 +28,7 @@ const HeroRightContent: React.FC<HeroRightContentProps> = ({ heroRightContentDat
 
     return (
         <HeroRightContentWrapper data-testid="hero-right-content">
-            <Image
-                src={momAndBabyPhoto}
-                alt="woman holding her baby in the outdoors"
-                fetchPriority="high"
-                loading="eager" //prevents lazy load
-            />
+            <Image src={momAndBabyPhoto} alt="woman holding her baby in the outdoors" />
 
             <WordsWrapper>
                 {words?.map((word: string, index: number) => {
