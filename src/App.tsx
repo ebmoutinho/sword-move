@@ -11,7 +11,7 @@ import HomePage from "./pages/home/HomePage";
 
 import type { MenuItemType } from "./types/MenuItems.types";
 
-import { AppWrapper, ContentWrapper } from "./App.styles";
+import { AppWrapper, ContentWrapper, HeroSectionWrapper } from "./App.styles";
 import GlobalStyles from "./styles/global.styles";
 
 const App: React.FC = () => {
@@ -29,10 +29,10 @@ const App: React.FC = () => {
                 <Route
                     path={RouteEnum.Home}
                     element={
-                        <>
+                        <HeroSectionWrapper>
                             <HeroSection />
                             <HomePage />
-                        </>
+                        </HeroSectionWrapper>
                     }
                 />
 

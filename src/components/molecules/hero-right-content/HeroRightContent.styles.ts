@@ -15,7 +15,7 @@ export const WordsWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100% - var(--header-height));
+    height: calc(100vh - var(--header-height));
     padding: var(--spacing-12) var(--spacing-36);
     position: absolute;
 `;

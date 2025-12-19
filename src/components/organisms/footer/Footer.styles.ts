@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
     display: flex;
+        align-items: center;
     background-color: var(--color-grey-light);
     padding: var(--spacing-32) var(--spacing-64);
 `;
@@ -11,7 +12,7 @@ export const LogoWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
-    gap: 20px;
+    gap: var(--spacing-24);
 `;
 
 export const InfoWrapper = styled.div`
