@@ -6,7 +6,7 @@ interface MenuItemWrapperStylingProps {
     isSelected: boolean;
 }
 
-export const MenuItemWrapper = styled(Link).withConfig({
+export const MenuItemLink = styled(Link).withConfig({
     shouldForwardProp: (prop) => !["isSelected"].includes(prop),
 })<MenuItemWrapperStylingProps>`
     font-weight: 600;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`MenuItem renders correctly 1`] = `
+.c0 {
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.c0:hover {
+  color: var(--color-blue-medium);
+}
+
+.c0:active {
+  color: var(--color-blue-dark);
+}
+
+<a
+  class="c0"
+  data-discover="true"
+  data-testid="menu-item-HOME"
+  href="/"
+>
+  HOME
+</a>
+`;
+
+exports[`MenuItem renders styles when it's the selected menu item 1`] = `
+.c0 {
+  font-weight: 600;
+  color: var(--color-blue-light);
+}
+
+.c0:hover {
+  color: var(--color-blue-medium);
+}
+
+.c0:active {
+  color: var(--color-blue-dark);
+}
+
+<a
+  class="c0"
+  data-discover="true"
+  data-testid="menu-item-HOME"
+  href="/"
+>
+  HOME
+</a>
+`;

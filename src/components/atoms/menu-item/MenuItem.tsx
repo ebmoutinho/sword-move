@@ -2,7 +2,7 @@ import React from "react";
 
 import type { MenuItemType } from "../../../types/MenuItems.types";
 
-import { MenuItemWrapper } from "./MenuItem.styles";
+import { MenuItemLink } from "./MenuItem.styles";
 
 interface MenuItemProps {
     menuItem: MenuItemType;
@@ -11,9 +11,9 @@ interface MenuItemProps {
 
 const MenuItem: React.FC<MenuItemProps> = ({ menuItem, isSelected }) => {
     return (
-        <MenuItemWrapper data-testid="menu-item" to={menuItem.route} isSelected={isSelected}>
+        <MenuItemLink data-testid={`menu-item-${menuItem.title}`} to={menuItem.route} isSelected={isSelected}>
             {menuItem.title}
-        </MenuItemWrapper>
+        </MenuItemLink>
     );
 };
 

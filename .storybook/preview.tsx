@@ -1,13 +1,15 @@
+import { MemoryRouter } from "react-router-dom";
+
 import GlobalStyles from "../src/styles/global.styles";
 
 import type { Decorator, Preview } from "@storybook/react-vite";
 
 export const decorators: Decorator[] = [
     (Story) => (
-        <>
+        <MemoryRouter>
             <GlobalStyles />
             <Story />
-        </>
+        </MemoryRouter>
     ),
 ];
 

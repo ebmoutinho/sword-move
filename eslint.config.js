@@ -8,7 +8,14 @@ import tseslint from "typescript-eslint";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
-    { ignores: ["dist"] },
+    {
+        ignores: [
+            "dist",
+            "eslint.config.js",
+            "jest.config.js",
+            "vitest.shims.d.ts"
+        ],
+    },
     js.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
     {
@@ -163,15 +170,15 @@ export default defineConfig([
             ecmaVersion: 2020,
             globals: { ...globals.browser, ...globals.node },
             parserOptions: {
-                project: "./tsconfig.json", // Keep type-checking
+                project: "./tsconfig.json",
                 tsconfigRootDir: import.meta.dirname,
             },
         },
         rules: {
             semi: ["error", "always"],
-            // Disable only the problematic rules for Storybook
             "@typescript-eslint/no-unsafe-call": "off",
             "@typescript-eslint/no-unsafe-assignment": "off",
+            "@typescript-eslint/no-unsafe-return": "off",
             "@typescript-eslint/no-unsafe-member-access": "off",
             "@typescript-eslint/no-unsafe-argument": "off",
         },

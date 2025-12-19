@@ -10,11 +10,12 @@ import {
     LogoWrapper,
     GroupWrapper,
     FooterItem,
+    FooterItemLink,
 } from "./Footer.styles";
 
 const Footer: React.FC = () => {
     return (
-        <FooterWrapper>
+        <FooterWrapper data-testid="footer">
             <LogoWrapper>
                 <SwordIcon />
                 <FooterItem fontSize="0.875rem">{FooterEnum.Copyright}</FooterItem>
@@ -28,7 +29,9 @@ const Footer: React.FC = () => {
                     </GroupWrapper>
 
                     <GroupWrapper>
-                        <FooterItem>{FooterEnum.Email}</FooterItem>
+                        <FooterItemLink href={`mailto:${FooterEnum.Email}`}>
+                            {FooterEnum.Email}
+                        </FooterItemLink>
                         <FooterItem>{FooterEnum.Telephone}</FooterItem>
                     </GroupWrapper>
                 </InfoColumn>

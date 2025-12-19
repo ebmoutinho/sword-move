@@ -1,10 +1,16 @@
+import { MemoryRouter } from "react-router-dom";
+
 import { render, screen } from "@testing-library/react";
 
 import HeroLeftContent from "./HeroLeftContent";
 
 describe("HeroLeftContent", () => {
     it("renders correctly", () => {
-        render(<HeroLeftContent />);
+        render(
+            <MemoryRouter>
+                <HeroLeftContent />
+            </MemoryRouter>,
+        );
 
         const heroLeftContent = screen.getByTestId("hero-left-content");
         const moveSpan = screen.getByTestId("animated-span");
@@ -18,7 +24,9 @@ describe("HeroLeftContent", () => {
     });
 
     it("renders animated span with hover animation'", () => {
-        render(<HeroLeftContent />);
+        render(<MemoryRouter>
+                <HeroLeftContent />
+            </MemoryRouter>,);
 
         const moveWithAnimation = screen.getByTestId("animated-span");
 

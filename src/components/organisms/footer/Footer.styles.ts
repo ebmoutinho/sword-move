@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
     display: flex;
-        align-items: center;
+    align-items: center;
     background-color: var(--color-grey-light);
     padding: var(--spacing-32) var(--spacing-64);
 `;
@@ -45,4 +45,17 @@ export const FooterItem = styled.p.withConfig({
 })<FooterItemStylingProps>`
     font-size: ${({ fontSize }) => (fontSize ? fontSize : "unset")};
     font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 500)};
+`;
+
+export const FooterItemLink = styled.a`
+    font-weight: 500;
+    color: var(--color-blue-light);
+
+    &:hover {
+        color: var(--color-blue-medium);
+    }
+
+    &:active {
+        color: var(--color-blue-dark);
+    }
 `;
